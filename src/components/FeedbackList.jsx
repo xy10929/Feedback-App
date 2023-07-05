@@ -14,8 +14,6 @@ function FeedbackList({ feedback, handleDelete }) {
       }
     </div>
   )
-
-
 }
 
 export default FeedbackList
