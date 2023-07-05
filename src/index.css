@@ -118,7 +118,7 @@ input:focus {
   outline: none;
 }
 
-.feedback-stats {
+.feedback-states {
   color: #fff;
   display: flex;
   justify-content: space-between;
