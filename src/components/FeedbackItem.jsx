@@ -1,7 +1,7 @@
 import Card from "./shared/Card"
 import { FaTimes } from 'react-icons/fa'
 
-function FeedbackItem({ item,handleDelete }) {
+function FeedbackItem({ item, handleDelete }) {
 
   return (
     <Card>
