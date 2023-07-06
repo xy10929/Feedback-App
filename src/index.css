@@ -190,6 +190,9 @@ input:focus {
 .about-link {
   display: flex;
   justify-content: flex-end;
+  position:fixed;
+  right: 10px;
+  bottom: 10px;
 }
 
 /* FIX: Remove position: absolute to keep about icon at the bottom of the
