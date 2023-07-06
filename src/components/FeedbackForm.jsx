@@ -11,7 +11,7 @@ function FeedbackForm({ handleAdd }) {
   const [rating, setRating] = useState(10)
 
   const handleTextChange = (e) => {
-    if (text === '') {
+    if (text === null) {
       setBtnDisabled(true)
       setMassage(null)
     } else if (text.trim().length < 10) {
@@ -50,7 +50,7 @@ function FeedbackForm({ handleAdd }) {
           />
           <Button type="submit" isDisabled={btnDisabled}>Send</Button>
         </div>
-        {massage && <div className="massage">{massage}</div>}
+        {massage && <div className="message">{massage}</div>}
       </form>
     </Card>
   )
