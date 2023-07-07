@@ -3,13 +3,13 @@ function Button({ children, version, type, isDisabled }) {
     <button type={type} disabled={isDisabled} className={`btn btn-${version}`}>
       {children}
     </button>
-  )
+  );
 }
 
 Button.defaultProps = {
-  version: 'primary',
-  type: 'button',
-  isDisabled: false
-}
+  version: "primary",
+  type: "button",
+  isDisabled: false,
+};
 
-export default Button
+export default Button;
