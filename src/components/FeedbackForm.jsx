@@ -22,7 +22,7 @@ function FeedbackForm() {
   },[feedbackEdit])
 
   const handleTextChange = (e) => {
-    if (text === null) {
+    if (text === '') {
       setBtnDisabled(true)
       setMassage(null)
     } else if (text.trim().length < 10) {
