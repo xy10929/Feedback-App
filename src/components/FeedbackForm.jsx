@@ -11,7 +11,7 @@ function FeedbackForm() {
   const [massage, setMassage] = useState('')
   const [rating, setRating] = useState(10)
 
-  const {addFeedback, feedbackEdit} = useContext(FeedbackContext)
+  const {addFeedback, feedbackEdit, undateFeedback} = useContext(FeedbackContext)
   
   useEffect(()=>{
     if(feedbackEdit.edit === true){
@@ -43,8 +43,17 @@ function FeedbackForm() {
         text,
         rating
       }
-
-      addFeedback(newFeedback)
+      
+      if(feedbackEdit.edit === true){
+        undateFeedback(feedbackEdit.item.id, newFeedback)
+        feedbackEdit.edit = false
+        //reset state of feedbackEdit after editing
+      }else{
+        addFeedback(newFeedback)
+      }
+      
+      setBtnDisabled(true)
+      setRating(10)
       setText('')
     }
   }
